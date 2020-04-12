@@ -1,0 +1,16 @@
++ SERVICE_NAME=demo
++ IMAGE_URI=.dkr.ecr..amazonaws.com/:
+++ tail -n1
+++ jq --raw-output '.taskDefinitionArns[] | select(contains("demo"))'
+create-new-task-def.sh: line 5: jq: command not found
+++ aws ecs list-task-definitions
++ TASKDEF_NAME=
+++ aws ecs describe-task-definition --task-definition
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: argument --task-definition: expected one argument
++ CURRENT_TASKDEF=
